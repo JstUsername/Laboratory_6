@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="\static\css\articles.css">
+    </head>
+    <title>
+        {{post.title}}
+    </title>
+    <style>
+        .article{
+            }
+    </style>
+    <body>
+        <p style="margin-left: 81%"><a class="link" href="http://127.0.0.1:8000/registration/">Registration</a></p>
+        <div class="header">
+            <img src="https://mtuci.tech/wp-content/uploads/2019/10/logo.png" alt="Logo" width="280" height="280">
+        </div>
+        <div class="archive">
+                <div class="one-post">
+                    <h2 class="post-title">{{post.title}}</h2>
+                    <div class="article-info">
+                        <div class="article-author">{{ post.author.username}}</div>
+                        <div class="article-created-date">{{ post.created_date }}</div>
+                    </div>
+                    <p class="article-text">{{ post.get_excerpt }}</p>
+                </div>
+        </div>
+        <a class="link" href="http://127.0.0.1:8000/archive/">All articles</a>
+        <a class="link" href="http://127.0.0.1:8000/article/new/">Write another article</a>
+    </body>
+</html>

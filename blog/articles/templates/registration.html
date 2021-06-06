@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+    </head>
+    <body>
+        <p style="margin-left: 4.5%">
+            <img src="https://mtuci.tech/wp-content/uploads/2019/10/logo.png" alt="Logo" width="280" height="280">
+        </p>
+        <link rel="stylesheet" href="/static/css/registration.css">
+            <form id="add_form" method="post">
+                    {% csrf_token %}
+                    <table>
+                    {{form.as_table}}
+                    </table>
+                    <button form="add_form" type="submit" class="btn btn-primary mt-4">Register</button>
+    </body>
+</html>
